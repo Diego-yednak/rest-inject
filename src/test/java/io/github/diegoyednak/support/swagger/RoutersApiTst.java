@@ -3,10 +3,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-package io.github.swagger;
+package io.github.diegoyednak.support.swagger;
 
-import io.github.swagger.model.*;
-import io.github.swagger.model.Error;
+import io.github.diegoyednak.support.swagger.model.*;
+import io.github.diegoyednak.support.swagger.model.Error;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;

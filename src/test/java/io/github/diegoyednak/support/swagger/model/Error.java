@@ -1,4 +1,4 @@
-package io.github.swagger.model;
+package io.github.diegoyednak.support.swagger.model;
 
 import jakarta.annotation.Generated;
 

@@ -1,6 +1,6 @@
 package io.github.diegoyednak.mock;
 
-import io.github.swagger.model.ApiNetworkLayer;
+import io.github.diegoyednak.support.swagger.model.ApiNetworkLayer;
 
 public class EntitiesMock {
 

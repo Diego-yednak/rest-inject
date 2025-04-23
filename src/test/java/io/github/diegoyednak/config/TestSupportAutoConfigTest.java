@@ -1,20 +1,22 @@
 package io.github.diegoyednak.config;
 
-import io.github.diegoyednak.BaseSetupTest;
+import io.github.diegoyednak.support.annotation.InjectMockServer;
+import io.github.diegoyednak.support.annotation.SpringBootTestJupiter;
 import io.github.diegoyednak.annotation.InjectRestClient;
 import io.github.diegoyednak.error.HttpErrorResponseException;
 import io.github.diegoyednak.mock.EntitiesMock;
-import io.github.swagger.RoutersApiTst;
-import io.github.swagger.model.ApiEquipmentStatus;
-import io.github.swagger.model.ApiErrorMessage;
-import io.github.swagger.model.ApiNetworkLayer;
-import io.github.swagger.model.ApiNetworkLayerStatus;
-import io.github.swagger.model.Error;
+import io.github.diegoyednak.support.swagger.RoutersApiTst;
+import io.github.diegoyednak.support.swagger.model.ApiEquipmentStatus;
+import io.github.diegoyednak.support.swagger.model.ApiErrorMessage;
+import io.github.diegoyednak.support.swagger.model.ApiNetworkLayer;
+import io.github.diegoyednak.support.swagger.model.ApiNetworkLayerStatus;
+import io.github.diegoyednak.support.swagger.model.Error;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.*;
 import org.springframework.test.web.client.ExpectedCount;
+import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.web.context.request.NativeWebRequest;
 
 import java.util.Arrays;
@@ -26,11 +28,15 @@ import static org.springframework.test.web.client.match.MockRestRequestMatchers.
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withServerError;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
+@SpringBootTestJupiter
 @DisplayName("Requisições para a API de roteadores")
-class TestSupportAutoConfigTest extends BaseSetupTest {
+class TestSupportAutoConfigTest {
 
     @InjectRestClient
     protected RoutersApiTst routerApi;
+
+    @InjectMockServer
+    protected MockRestServiceServer server;
 
     final String routersApiName = "Custom:RoutersApiTst";
 

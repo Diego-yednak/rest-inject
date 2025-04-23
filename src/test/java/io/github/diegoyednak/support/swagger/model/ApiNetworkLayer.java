@@ -1,4 +1,4 @@
-package io.github.swagger.model;
+package io.github.diegoyednak.support.swagger.model;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.annotation.Generated;

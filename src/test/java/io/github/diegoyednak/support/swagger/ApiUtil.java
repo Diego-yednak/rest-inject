@@ -1,4 +1,4 @@
-package io.github.swagger;
+package io.github.diegoyednak.support.swagger;
 
 import org.springframework.web.context.request.NativeWebRequest;
 
