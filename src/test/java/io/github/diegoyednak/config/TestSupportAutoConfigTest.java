@@ -33,10 +33,10 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 class TestSupportAutoConfigTest {
 
     @InjectRestClient
-    protected RoutersApiTst routerApi;
+    RoutersApiTst routerApi;
 
     @InjectMockServer
-    protected MockRestServiceServer server;
+    MockRestServiceServer server;
 
     final String routersApiName = "Custom:RoutersApiTst";
 
