@@ -47,7 +47,6 @@ public class InternalApiRequest {
             String codeStr = response.responseCode();
             if (codeStr.contentEquals("default")) {
                 this.errorResponseTypes.put(0, extractClass(response));
-                return;
             } else {
                 int code = Integer.parseInt(codeStr);
                 if (code < 200 || code > 299) {

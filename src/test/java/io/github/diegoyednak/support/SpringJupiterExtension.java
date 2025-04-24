@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.lang.reflect.Field;
 
-public class RestInjectTestExtension implements BeforeEachCallback {
+public class SpringJupiterExtension implements BeforeEachCallback {
 
     @Override
     public void beforeEach(ExtensionContext context) {

@@ -139,7 +139,7 @@ class TestSupportAutoConfigTest {
         HttpErrorResponseException exception = Assertions.assertThrows(HttpErrorResponseException.class,
                 () -> routerApi.getNetworkLayersStatus(Arrays.asList("ANY", "ANY2"))
         );
-        ApiErrorMessage body = exception.getBodyContent();
+        ApiErrorMessage body = exception.getBody();
         HttpHeaders headers = exception.getHeaders();
         // Assert
         assertEquals(MediaType.APPLICATION_JSON, headers.getContentType());
@@ -167,7 +167,7 @@ class TestSupportAutoConfigTest {
         // Assert
         assertEquals(0, headers.size());
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, exception.getStatusCode());
-        assertEquals(bodyError, exception.getBodyContent());
+        assertEquals(bodyError, exception.getBody());
         // Verify
         server.verify();
     }
@@ -211,7 +211,7 @@ class TestSupportAutoConfigTest {
                 () -> routerApi.patchNetworkLayers("MY-ID", EntitiesMock.buildApiNetworkLayerWithoutIdAndDate())
         );
         HttpHeaders headers = exception.getHeaders();
-        Error body = exception.getBodyContent();
+        Error body = exception.getBody();
         // Assert
         assertEquals(MediaType.APPLICATION_JSON, headers.getContentType());
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, exception.getStatusCode());
@@ -236,7 +236,7 @@ class TestSupportAutoConfigTest {
                 () -> routerApi.deleteNetworkLayers("MY-ID")
         );
         HttpHeaders headers = exception.getHeaders();
-        List<ApiErrorMessage> body = exception.getBodyContent();
+        List<ApiErrorMessage> body = exception.getBody();
         // Assert
         assertEquals(MediaType.APPLICATION_JSON, headers.getContentType());
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, exception.getStatusCode());

@@ -1,6 +1,6 @@
 package io.github.diegoyednak.support.annotation;
 
-import io.github.diegoyednak.support.RestInjectTestExtension;
+import io.github.diegoyednak.support.SpringJupiterExtension;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.lang.annotation.ElementType;
@@ -10,6 +10,6 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@ExtendWith(RestInjectTestExtension.class)
+@ExtendWith(SpringJupiterExtension.class)
 public @interface SpringBootTestJupiter {
 }

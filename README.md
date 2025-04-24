@@ -1,6 +1,6 @@
 # rest-inject – REST client injection made simple for Spring
 
-[![License](https://img.shields.io/github/license/Diego-yednak/rest-inject)](LICENSE)
+[![License](https://img.shields.io/github/license/Diego-yednak/rest-inject)]()
 [![Build](https://img.shields.io/github/actions/workflow/status/Diego-yednak/rest-inject/build.yml)](https://github.com/Diego-yednak/rest-inject/actions)
 
 **rest-inject** is a lightweight Java library for automatically injecting REST clients based on OpenAPI interface definitions.  
